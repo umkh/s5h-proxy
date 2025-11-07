@@ -4,9 +4,9 @@ A SOCKS5 to HTTP proxy bridge written in Go. This proxy accepts SOCKS5 connectio
 
 ## How It Works
 
-1. **SOCKS5 Server**: The application starts a SOCKS5 proxy server listening on a configurable port (default: 1080)
+1. **SOCKS5 Server**: The application starts a SOCKS5 proxy server listening on a configurable port (default: 1080).
 
-2. **Custom Dialer**: When a client connects via SOCKS5 and requests a connection to a target server, the proxy uses a custom dialer (`httpProxyDialer`) instead of direct TCP connections
+2. **Custom Dialer**: When a client connects via SOCKS5 and requests a connection to a target server, the proxy uses a custom dialer (`httpProxyDialer`) instead of direct TCP connections.
 
 3. **HTTP CONNECT Tunneling**: The custom dialer:
    - Connects to the upstream HTTP proxy
@@ -14,7 +14,7 @@ A SOCKS5 to HTTP proxy bridge written in Go. This proxy accepts SOCKS5 connectio
    - Handles HTTP proxy authentication if credentials are provided in the proxy URL
    - Returns the established connection to the SOCKS5 server
 
-4. **Data Forwarding**: Once the tunnel is established, the SOCKS5 server transparently forwards data between the client and target server through the HTTP proxy tunnel
+4. **Data Forwarding**: Once the tunnel is established, the SOCKS5 server transparently forwards data between the client and target server through the HTTP proxy tunnel.
 
 ## Configuration
 
@@ -30,7 +30,7 @@ The proxy is configured using environment variables:
 
 ### Prerequisites
 
-- Go 1.24.0 or higher
+- Go 1.24.0 or higher.
 
 ### Build
 
